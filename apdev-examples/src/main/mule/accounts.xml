@@ -26,6 +26,7 @@ output application/json
 payload]]></ee:set-payload>
 			</ee:message>
 		</ee:transform>
+		<logger level="INFO" doc:name="Logger" doc:id="905eeb8a-2bdf-48d5-ac32-ad8f1b712ffc" />
 	</flow>
 	<flow name="getCSVaccounts" doc:id="677f1263-c964-40a1-89d8-0410a464b109" initialState="stopped">
 		<file:listener doc:name="accounts.csv" doc:id="7b06bc0f-276f-45e1-9de4-8a3280b75f5d" config-ref="File_Config" directory="input" moveToDirectory="output">
