@@ -1,0 +1,18 @@
+http:
+  port: "8081"
+  
+sfdc:
+  username: "zusa@hotmail.com"
+  password: "8Olamae8"
+  token: "VCziFerXXdj0ZOBcrOzABEcF"  
+
+file:
+  accountsDir: "C:/Users/r.pereira/OneDrive - Accenture/Desktop/Treinos das Mulas/APDevFundamentals4.4_studentFiles_SP_06may2022/APDevFundamentals4.4_studentFiles_SP_06may2022/resources"
+  
+db:
+  host: "mudb.learn.mulesoft.com"
+  port: "3306"
+  user: "mule"
+  password: "mule"
+  database: "training"
+
