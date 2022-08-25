@@ -10,9 +10,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: apdev-examples
     
     steps:
     
@@ -42,6 +39,7 @@ jobs:
         commitHash=$(git rev-parse --short "$GITHUB_SHA")
         artifactName2=$(ls target/*.jar | head -1 | sed "s/.jar/-$commitHash.jar/g")
         mv $artifactName1 $artifactName2
+        mv $artifactName2 ../target/
     
     - name: Upload artifact 
       uses: actions/upload-artifact@master
@@ -52,9 +50,6 @@ jobs:
   deploy:
     needs: build
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: apdev-examples
 
     steps:    
     
