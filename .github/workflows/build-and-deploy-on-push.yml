@@ -6,10 +6,6 @@ on:
   push:
     branches: [ master ]
   workflow_dispatch:
-
-defaults:
-  run:
-    working-directory: ./apdev-examples
   
 jobs:
   build:
