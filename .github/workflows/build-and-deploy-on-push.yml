@@ -6,7 +6,11 @@ on:
   push:
     branches: [ master ]
   workflow_dispatch:
-    
+  
+defaults:
+  run:
+    working-directory: web
+  
 jobs:
   build:
     runs-on: ubuntu-latest
