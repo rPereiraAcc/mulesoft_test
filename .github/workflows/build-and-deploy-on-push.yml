@@ -9,7 +9,7 @@ on:
   
 defaults:
   run:
-    working-directory: web
+    working-directory: apdev-examples
   
 jobs:
   build:
