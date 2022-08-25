@@ -37,6 +37,9 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     
+    - name: candido
+      run: echo "$pwd"
+      
     - name: Stamp artifact file name with commit hash
       run: |
         artifactName1=$(ls target/*.jar | head -1)
@@ -49,7 +52,7 @@ jobs:
       uses: actions/upload-artifact@master
       with:
           name: artifacts
-          path: ~/apdev-examples/target/*.jar
+          path: target/*.jar
         
   deploy:
     needs: build
