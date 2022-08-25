@@ -30,20 +30,18 @@
 				<version>${mule.maven.plugin.version}</version>
 				<extensions>true</extensions>
 				<configuration>
-					<sharedLibraries>
-						<sharedLibrary>
-							<groupId>mysql</groupId>
-							<artifactId>mysql-connector-java</artifactId>
-						</sharedLibrary>
-						<sharedLibrary>
-							<groupId>org.apache.activemq</groupId>
-							<artifactId>activemq-client</artifactId>
-						</sharedLibrary>
-						<sharedLibrary>
-							<groupId>org.apache.activemq</groupId>
-							<artifactId>activemq-broker</artifactId>
-						</sharedLibrary>
-					</sharedLibraries>
+					<cloudHubDeployment>				
+					<uri>https://anypoint.mulesoft.com</uri>				
+					<muleVersion>4.3.0</muleVersion>				
+					<username>${anypoint.username}</username>				
+					<password>${anypoint.password}</password>				
+					<applicationName>mule-app-cicd-github</applicationName>				
+					<environment>Sandbox</environment>				
+					<workerType>MICRO</workerType>				
+					<region>us-east-2</region>				
+					<workers>1</workers>				
+					<objectStoreV2>true</objectStoreV2>				
+					</cloudHubDeployment>				
 				</configuration>
 			</plugin>
 		</plugins>
