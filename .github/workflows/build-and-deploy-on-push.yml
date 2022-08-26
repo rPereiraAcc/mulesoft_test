@@ -73,6 +73,7 @@ jobs:
         PASSWORD: ${{ secrets.PASSWORD }}
         CONN_APP_CLIENT_SECRET: ${{ secrets.CONN_APP_CLIENT_SECRET }}
         CONN_APP_CLIENT_ID: ${{ secrets.CONN_APP_CLIENT_ID }}
+      working-directory: azuredatalake
       run: |
         artifactName=$(ls *.jar | head -1)
         mvn deploy -DmuleDeploy \
