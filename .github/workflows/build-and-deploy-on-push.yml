@@ -82,5 +82,4 @@ jobs:
          -Danypoint.username="$USERNAME" \
          -Danypoint.password="$PASSWORD" \
          -Danypoint.CONN_APP_CLIENT_ID="$CONN_APP_CLIENT_ID" \
-         -Danypoint.CONN_APP_CLIENT_SECRET="$CONN_APP_CLIENT_SECRET" \
-         -DskipTestsC
+         -Danypoint.CONN_APP_CLIENT_SECRET="$CONN_APP_CLIENT_SECRET"
