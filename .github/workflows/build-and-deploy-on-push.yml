@@ -6,10 +6,6 @@ on:
   push:
     branches: [ master ]
   workflow_dispatch:
-
-defaults:
- run:
-  working-directory: azuredatalake
   
 jobs:
   build:
@@ -21,7 +17,7 @@ jobs:
     
     - uses: actions/cache@v1
       with:
-        path: ~/.m2/repository
+        path: ~/.m2/repository/azuredatalake
         key: ${{ runner.os }}-maven-${{ hashFiles('**/pom.xml') }}
         restore-keys: |
           ${{ runner.os }}-maven-
