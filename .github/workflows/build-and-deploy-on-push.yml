@@ -9,7 +9,7 @@ on:
 
 defaults:
  run:
-  working-directory: apdev-examples
+  working-directory: azuredatalake
   
 jobs:
   build:
@@ -48,7 +48,7 @@ jobs:
       uses: actions/upload-artifact@master
       with:
           name: artifacts
-          path: apdev-examples/target/*.jar
+          path: azuredatalake/target/*.jar
         
   deploy:
     needs: build
