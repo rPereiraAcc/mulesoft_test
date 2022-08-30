@@ -12,7 +12,7 @@ on:
 jobs:
   verify-directories:
     runs-on: ubuntu-latest
-    name: Test changed-files
+    name: Verify directories changed 
     outputs:
         matrix: ${{ steps.json-array.outputs.dirNamesArray }}
         
@@ -25,7 +25,7 @@ jobs:
         id: changed-files-dir-names
         uses: tj-actions/changed-files@v29.0.1
         with:
-          files: "true"
+          dir_names: "true"
           
       - name: List all changed files in directory
         id: list-dirs-changed
