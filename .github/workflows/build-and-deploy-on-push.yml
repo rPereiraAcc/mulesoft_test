@@ -63,7 +63,7 @@ jobs:
     needs: verify-directories
     strategy:
       matrix: 
-        dirs: ${{ fromJson(needs.build.outputs.matrix) }}
+        dirs: ${{ fromJson(needs.verify-directories.outputs.matrix) }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
