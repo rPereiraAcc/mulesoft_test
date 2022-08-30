@@ -37,7 +37,7 @@ jobs:
       - name: Convert to json
         id: json-array
         run: |
-          read -r -a array <<< ${{ steps.changed-files-dir-names.outputs.all_changed_files }}
+          read -r -a array <<< '${{ steps.changed-files-dir-names.outputs.all_changed_files }}'
           
           json_array() {
             echo -n '['
