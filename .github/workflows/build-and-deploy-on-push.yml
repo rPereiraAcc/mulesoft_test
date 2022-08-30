@@ -25,7 +25,7 @@ jobs:
         id: changed-files-dir-names
         uses: tj-actions/changed-files@v29.0.1
         with:
-          dir_names: "true"
+          files: "true"
           
       - name: List all changed files in directory
         id: list-dirs-changed
