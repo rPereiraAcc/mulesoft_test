@@ -37,9 +37,7 @@ jobs:
       - name: Convert to json
         id: json-array
         run: |
-          dirs=${{ steps.changed-files-dir-names.outputs.all_changed_files }}
-          echo "$dirs"
-          read -r -a array <<< $dirs
+          read -r -a array <<< ${{ steps.changed-files-dir-names.outputs.all_changed_files }}
           
           json_array() {
             echo -n '['
@@ -52,7 +50,9 @@ jobs:
             echo ']'
           }
           
-          arr="$(json_array "${array[@]}")"
+          dirs=(`for path in "${array[@]}"; do echo "$(cut -d "/" -f1 <<< $path)"; done | sort -u`)
+          
+          arr="$(json_array "${dirs[@]}")"
           
           echo $arr
 
