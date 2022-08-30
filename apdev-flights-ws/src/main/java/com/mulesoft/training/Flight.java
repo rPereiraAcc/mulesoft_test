@@ -2,6 +2,7 @@ package com.mulesoft.training;
 
 public class Flight implements java.io.Serializable, Comparable<Flight> {
 
+	
 	/**
 	 * 
 	 */
